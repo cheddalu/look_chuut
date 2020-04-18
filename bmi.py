@@ -1,4 +1,5 @@
-weight = int(input("How many lbs are ya? "))
+name = input("What is your name? ")
+weight = int(input("How many lbs are you? "))
 height = int(input("Give me your height in inches: "))
 
 # weight = 270
@@ -6,9 +7,9 @@ height = int(input("Give me your height in inches: "))
 # print(type(weight))
 # print(type(height))
 
-def bmi_calculator(weight, height):
+def bmi_calculator(name, weight, height):
     bmi = round((weight * 703) / (height ** 2),2)
-    print("Your bmi is: " + str(bmi))
+    print(name + ", your bmi is: " + str(bmi))
     if (bmi < 18.5): 
         print('You\'re a bit underweight')
     elif (bmi >= 18.5 and bmi <= 24.9):
@@ -18,4 +19,4 @@ def bmi_calculator(weight, height):
     else: 
         print('You\'re considered obese. Start getting more active.')
 
-bmi_calculator(weight, height)
+bmi_calculator(name, weight, height)
